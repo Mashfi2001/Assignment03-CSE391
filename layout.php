@@ -1,7 +1,5 @@
 <?php
-// layout.php - the header (top menu) and footer shared by every page.
 
-// Print the top of the page. $active is the menu item to highlight.
 function page_header($title, $active = "")
 {
     ?>
@@ -31,7 +29,6 @@ function page_header($title, $active = "")
     <?php
 }
 
-// Print the bottom of the page. $scripts is a list of .js files to load.
 function page_footer($scripts = [])
 {
     ?>

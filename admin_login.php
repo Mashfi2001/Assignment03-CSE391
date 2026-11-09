@@ -1,5 +1,4 @@
 <?php
-// admin_login.php - login form for the admin.
 require 'functions.php';
 require 'layout.php';
 require 'admin_auth.php';
@@ -11,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'] ?? "";
 
     if ($username == $admin_username && $password == $admin_password) {
-        $_SESSION['is_admin'] = true;          // remember the admin is logged in
+        $_SESSION['is_admin'] = true;
         header("Location: admin.php");
         exit;
     } else {

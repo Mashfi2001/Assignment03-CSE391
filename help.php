@@ -1,5 +1,4 @@
 <?php
-// Help page for clients and the admin.
 require 'functions.php';
 require 'layout.php';
 
@@ -14,15 +13,15 @@ page_header('Help', 'help');
     <h2>How do I book an appointment?</h2>
     <ol>
         <li>Open the <a href="index.php">Book</a> page.</li>
+        <li>In the <strong>Free places</strong> box, pick your date and press <strong>Check</strong> to see how many free places each mechanic has.</li>
         <li>Fill in your name, address, phone, car license number and car engine number.</li>
-        <li>Pick an appointment date. The list of mechanics updates to show how many free places each one has on that day.</li>
-        <li>Choose a mechanic who still has free places, then press <strong>Book appointment</strong>.</li>
+        <li>Pick the same date, choose a mechanic who still has free places, then press <strong>Book appointment</strong>.</li>
         <li>A green message confirms your booking. A red message explains what to fix.</li>
     </ol>
 
     <h2>Booking rules</h2>
     <ul>
-        <li>Each mechanic can take at most <strong>4 cars per day</strong>. Fully booked mechanics are greyed out.</li>
+        <li>Each mechanic can take at most <strong>4 cars per day</strong>. Fully booked mechanics show <strong>Full</strong> in the Free places table.</li>
         <li>Each client can have only <strong>one appointment per day</strong> (checked by car license number and phone).</li>
         <li>You cannot book a date in the past.</li>
     </ul>

@@ -1,18 +1,14 @@
 <?php
-// admin.php - Admin panel: see all appointments and change date / mechanic.
 require 'db.php';
 require 'functions.php';
 require 'layout.php';
 require 'admin_auth.php';
 
-require_admin();   // send to login page if not logged in
+require_admin();
 
 $message     = "";
-$messageType = "";   // "success" or "error"
+$messageType = "";
 
-// ---------- The admin pressed "Complete" on a row ----------
-// The car is finished, so the appointment is removed from the list.
-// This also frees one place for that mechanic on that day.
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['complete'])) {
     $id = (int) $_POST['id'];
 
@@ -20,18 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['complete'])) {
 
     $message     = "Appointment completed and removed from the list.";
     $messageType = "success";
-}
-
-// ---------- The admin pressed "Save" on a row ----------
-elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
+} elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id          = (int) ($_POST['id'] ?? 0);
     $date        = trim($_POST['date'] ?? "");
     $mechanic_id = trim($_POST['mechanic_id'] ?? "");
 
-    // Check the new date and mechanic
     $errors = validate_date_and_mechanic($date, $mechanic_id);
 
-    // Get the appointment being changed and the new mechanic
     $sql  = "SELECT client_name, car_license, phone FROM appointments WHERE id = ?";
     $appt = run($conn, $sql, "i", [$id])->get_result()->fetch_assoc();
     $mechanic = get_mechanic($conn, $mechanic_id);
@@ -46,7 +37,6 @@ elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $message = "Mechanic not found.";
 
     } elseif (client_has_booking($conn, $appt['car_license'], $appt['phone'], $date, $id)) {
-        // $id is passed so this appointment does not count against itself
         $message = $appt['client_name'] . " already has another appointment on $date.";
 
     } elseif (booked_count($conn, $mechanic_id, $date, $id) >= $mechanic['max_daily']) {
@@ -65,7 +55,6 @@ elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// ---------- Load data for the page ----------
 $mechanics = $conn->query("SELECT id, name FROM mechanics ORDER BY id")->fetch_all(MYSQLI_ASSOC);
 
 $sql = "SELECT a.id, a.client_name, a.phone, a.car_license, a.appointment_date, a.mechanic_id,
@@ -123,7 +112,6 @@ page_header("Admin Panel", "admin");
                         </form>
                     </td>
                     <td>
-                        <!-- confirm() shows an OK/Cancel box; Cancel stops the form -->
                         <form method="post" action="admin.php" onsubmit="return confirm('Mark this appointment as complete? It will be removed.');">
                             <input type="hidden" name="id" value="<?= $a['id'] ?>">
                             <button type="submit" name="complete" class="btn small complete">Complete</button>
