@@ -1,0 +1,54 @@
+============================================================
+           AI USAGE DECLARATION
+============================================================
+
+Name: Mashfi Mahin Sarder
+Student ID:22299144
+Assignment:03
+Date:09-11-2026
+
+------------------------------------------------------------
+1. AI TOOLS USED (check all that apply)
+------------------------------------------------------------
+[ ] None
+[ ] ChatGPT
+[ ] GitHub Copilot
+[ ] Google Gemini
+[*] Claude
+[ ] Cursor
+[ ] Other: ________________
+
+------------------------------------------------------------
+2. PURPOSE OF AI USE (check all that apply)
+------------------------------------------------------------
+[*] Learning/understanding concepts
+[*] Debugging my code
+[*] Generating code snippets
+[ ] Writing text content
+[*] Design/styling ideas
+[ ] Image generation
+[ ] Other:
+
+------------------------------------------------------------
+3. DESCRIPTION OF AI USE
+------------------------------------------------------------
+I used the AI to understand concepts and used code snippets in some files as I found this assignment to have a very short time bound. Some of the complex codes of in the files, I have taken from AI. As I found 1 week to be very insufficient to learn PHP in depth.
+
+it helped me identify errors and explained how to fix them.
+------------------------------------------------------------
+4. AI-ASSISTED SECTIONS
+------------------------------------------------------------
+List specific files/sections where AI helped significantly:
+functions.php
+------------------------------------------------------------
+5. DECLARATION
+------------------------------------------------------------
+I declare that:
+- This disclosure is complete and accurate
+- I understand all code in my submission
+- I can explain and modify my work if asked
+- I take full responsibility for my submission
+
+Signature: Mashfi
+Date: 09-11-2026
+
