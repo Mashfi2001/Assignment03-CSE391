@@ -1,0 +1,209 @@
+/* Car Workshop Appointment System - styles */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eeeeee;
+  color: #333333;
+}
+
+a {
+  color: #0066cc;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+main {
+  padding: 20px 0;
+}
+
+/* Header */
+.site-header {
+  background-color: #2c3e50;
+  padding: 15px 0;
+}
+
+.brand {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-header nav {
+  margin-top: 10px;
+}
+
+.site-header nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.site-header nav a:hover,
+.site-header nav a.active {
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+/* Boxes */
+.card {
+  background-color: white;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.narrow {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.muted {
+  color: #777777;
+}
+
+/* Form */
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #999999;
+  box-sizing: border-box;
+}
+
+input.invalid,
+select.invalid {
+  border: 1px solid red;
+}
+
+.error {
+  display: block;
+  color: red;
+  font-size: 13px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #1a252f;
+}
+
+.btn.small {
+  margin-top: 0;
+  padding: 6px 12px;
+}
+
+.btn.complete {
+  background-color: green;
+}
+
+/* Messages */
+.alert {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.alert.success {
+  background-color: #d4edda;
+  color: green;
+  border: 1px solid green;
+}
+
+.alert.error {
+  background-color: #f8d7da;
+  color: red;
+  border: 1px solid red;
+}
+
+/* Free slots list */
+.slot-list {
+  list-style: none;
+  padding: 0;
+}
+
+.slot-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+.badge {
+  float: right;
+  font-weight: bold;
+}
+
+.badge.ok {
+  color: green;
+}
+
+.badge.full {
+  color: red;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th,
+td {
+  border: 1px solid #cccccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+/* Admin */
+.filter {
+  margin-bottom: 15px;
+}
+
+.filter label,
+.filter input {
+  display: inline;
+  width: auto;
+}
+
+.inline-edit input,
+.inline-edit select {
+  width: auto;
+  margin: 2px;
+}
